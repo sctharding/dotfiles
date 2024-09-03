@@ -120,6 +120,9 @@ set enable-bracketed-paste Off
 # Golang path
 export PATH=$PATH:/usr/local/go/bin
 
+# Pulumi Path
+export PATH=$PATH:$HOME/.pulumi/bin
+
 # Python Alias
 alias python=python3
 
@@ -128,5 +131,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+# Load in WSL specific configuration
+if uname -r | grep -q microsoft; then
+  source $HOME/.zshrc.wsl
+fi
+
