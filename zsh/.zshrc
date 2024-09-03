@@ -108,8 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export TERM=xterm-256color
-
 # neovim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 alias nv=nvim
