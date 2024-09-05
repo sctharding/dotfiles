@@ -127,6 +127,9 @@ export PATH=$PATH:$HOME/.pulumi/bin
 
 # Python Alias
 alias python=python3
+alias pip=pip3
+
+export PATH=$PATH:$HOME/.local/bin
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
