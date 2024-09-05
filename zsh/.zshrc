@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # neovim
+export EDITOR=nvim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 alias nv=nvim
 
@@ -116,6 +117,9 @@ alias nv=nvim
 set enable-bracketed-paste Off 
 
 # Golang path
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$GOBIN
 export PATH=$PATH:/usr/local/go/bin
 
 # Pulumi Path
