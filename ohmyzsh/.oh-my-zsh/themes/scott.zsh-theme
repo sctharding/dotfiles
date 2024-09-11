@@ -62,7 +62,7 @@ precmd() {
 
 # Define prompts
 #
-PROMPT="%(?.%F{#81c8be}.%F{red})❯%f " # Display a red prompt char on failure
+PROMPT="%(?.%F{#81c8be}.%F{red})➜%f " # Display a red prompt char on failure
 # RPROMPT="%F{8}${SSH_TTY:+%n@%m}%f"    # Display username if connected via SSH
 
 # ------------------------------------------------------------------------------
