@@ -973,8 +973,13 @@ require("lazy").setup({
 	},
 })
 
-vim.keymap.set("n", "sp", ":vsplit<CR>")
-vim.keymap.set("n", "sv", ":split<CR>")
+-- Set keymaps for splitting screen
+vim.keymap.set("n", "<leader>sp", ":vsplit<CR>", { desc = "[S]plit [P]ane" })
+vim.keymap.set("n", "<leader>sv", ":split<CR>", { desc = "[S]plit [V]ertical" })
+
+-- Set keymaps for resizing windows
+vim.keymap.set("n", "-", ":vertical resize +5<CR>")
+vim.keymap.set("n", "=", ":vertical resize -5<CR>")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
