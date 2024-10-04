@@ -102,7 +102,7 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
@@ -978,8 +978,8 @@ vim.keymap.set("n", "<leader>sp", ":vsplit<CR>", { desc = "[S]plit [P]ane" })
 vim.keymap.set("n", "<leader>sv", ":split<CR>", { desc = "[S]plit [V]ertical" })
 
 -- Set keymaps for resizing windows
-vim.keymap.set("n", "-", ":vertical resize +5<CR>")
-vim.keymap.set("n", "=", ":vertical resize -5<CR>")
+vim.keymap.set("n", "=", ":vertical resize +5<CR>")
+vim.keymap.set("n", "-", ":vertical resize -5<CR>")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
