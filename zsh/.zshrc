@@ -75,6 +75,7 @@ plugins=(
   aws
   zsh-autosuggestions
   kubectl
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -126,7 +127,8 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.pulumi/bin
 
 # Python Alias
-alias python=python3
+alias python=python3.12
+alias python3=python3.12
 alias pip=pip3
 
 export PATH=$PATH:$HOME/.local/bin
