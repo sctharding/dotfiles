@@ -896,6 +896,9 @@ require("lazy").setup({
 	},
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter-textobjects",
+		},
 		build = ":TSUpdate",
 		main = "nvim-treesitter.configs", -- Sets main module to use for opts
 		-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
@@ -912,6 +915,19 @@ require("lazy").setup({
 				"query",
 				"vim",
 				"vimdoc",
+				"python",
+			},
+			textobjects = {
+				select = {
+					enabled = true,
+					lookahead = true,
+					keymaps = {
+						["af"] = "@function.outer",
+						["if"] = "@function.inner",
+						["ac"] = "@class.outer",
+						["ic"] = "@class.inner",
+					},
+				},
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,

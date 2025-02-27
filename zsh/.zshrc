@@ -126,12 +126,9 @@ export PATH=$PATH:/usr/local/go/bin
 # Pulumi Path
 export PATH=$PATH:$HOME/.pulumi/bin
 
-# Python Alias
-alias python=python3.12
-alias python3=python3.12
-alias pip=pip3
-
+# Local bin and scripts
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/scripts
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -142,4 +139,14 @@ export NVM_DIR="$HOME/.nvm"
 if uname -r | grep -q microsoft; then
   source $HOME/.zshrc.wsl
 fi
+
+# devops cli
+export PATH=$PATH:$HOME/.devops/bin
+eval "$(uv generate-shell-completion zsh)"
+
+# tmux sessionizer
+bindkey -s ^f "tmux-sessionizer\n"
+
+# lazygit alias
+alias lg=lazygit
 
